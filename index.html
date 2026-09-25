@@ -196,17 +196,17 @@ body {
   <div class="section">
     <h3>💖 心形填充文字</h3>
     <label>文字内容</label>
-    <input type="text" id="f-word" value="家人们">
+    <input type="text" id="f-word" value="人美满">
     <label>文字数量 <span class="val" id="v-count">245</span></label>
     <input type="range" id="f-count" min="100" max="800" value="300" oninput="updateVal(&#39;v-count&#39;,this.value)">
-    <label>最小字号 <span class="val" id="v-minf">10px</span></label>
+    <label>最小字号 <span class="val" id="v-minf">9px</span></label>
     <input type="range" id="f-minf" min="6" max="20" value="10" oninput="updateVal(&#39;v-minf&#39;,this.value+&#39;px&#39;)">
-    <label>最大字号 <span class="val" id="v-maxf">26px</span></label>
+    <label>最大字号 <span class="val" id="v-maxf">28px</span></label>
     <input type="range" id="f-maxf" min="16" max="48" value="26" oninput="updateVal(&#39;v-maxf&#39;,this.value+&#39;px&#39;)">
-    <label>发光强度 <span class="val" id="v-glow">11</span></label>
+    <label>发光强度 <span class="val" id="v-glow">6</span></label>
     <input type="range" id="f-glow" min="0" max="30" value="12" oninput="updateVal(&#39;v-glow&#39;,this.value)">
     <label>文字颜色</label>
-    <input type="color" id="f-color" value="#ff69b4">
+    <input type="color" id="f-color" value="#ffc0cb">
   </div>
 
   <div class="section">
@@ -216,7 +216,7 @@ body {
     <label>字体大小 <span class="val" id="v-gsize">52px</span></label>
     <input type="range" id="f-gsize" min="28" max="100" value="52" oninput="updateVal(&#39;v-gsize&#39;,this.value+&#39;px&#39;)">
     <label>文字颜色</label>
-    <input type="color" id="f-gcolor" value="#ff1493">
+    <input type="color" id="f-gcolor" value="#fcfeda">
   </div>
 
   <div class="section">
@@ -236,8 +236,8 @@ body {
 // 1. 全局配置 & 状态
 // =====================================================================
 let C = {
-  word: '家人们', count: 300, minF: 10, maxF: 26, glow: 12,
-  color: '#ff69b4', greet: '中秋节快乐', gSize: 52, gColor: '#ff1493',
+  word: '人美满', count: 300, minF: 10, maxF: 26, glow: 12,
+  color: '#ff69b4', greet: '中秋节快乐', gSize: 52, gColor: '#ffc0cb',
   imgW: 220, imgSrc: '', flicker: true, particles: true, twinkle: true, pulse: true
 };
 let dirty = true;
@@ -306,7 +306,7 @@ function updateVal(id, v) { document.getElementById(id).textContent = v; }
 // 4. 读取UI → 配置
 // =====================================================================
 function readUI() {
-  C.word = document.getElementById('f-word').value.trim() || '家人们';
+  C.word = document.getElementById('f-word').value.trim() || '人美满';
   C.count = +document.getElementById('f-count').value;
   C.minF = +document.getElementById('f-minf').value;
   C.maxF = +document.getElementById('f-maxf').value;
